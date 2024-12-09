@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+nav {
+  background: black;
+  color: #fff;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background: url("./assets/neurona.jpg") no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+header .header-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+section {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  color: black;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+}
+
+.area,
+.profesional {
+  margin-bottom: 20px;
+}
+
+.equipo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+.divider {
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.profesional img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.divider-1 {
+  background-image: url("./assets/vr.jpg");
+}
+
+.divider-2 {
+  background-image: url("./assets/brain.jpg");
+}
+
+.divider-3 {
+  background-image: url("./assets/gafas.jpg");
+}
+
+footer {
+  text-align: center;
+  background: black;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+nav ul.visible {
+  display: flex;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+  nav ul.visible {
+    display: flex;
+  }
+  header {
+    height: 60vh;
+    font-size: 0.8rem;
+  }
+
+  section {
+    padding: 10px;
+  }
+  .equipo-container {
+    grid-template-columns: 1fr;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
